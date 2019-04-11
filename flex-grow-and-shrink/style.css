@@ -34,7 +34,12 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 
 .box1 {
-  flex:10 5 400px;
+  flex:10 10 400px;
+  /*
+  all sumed in flex: grow, shrink, basis;
+	flex-basis:400px;
+	flex;grow:10; // how much i'll overgrow over my brothers */
+	/*flex-shrink:10; //how much of me to give to the other one*/
 }
 
 .box2 {
