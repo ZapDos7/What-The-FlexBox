@@ -34,38 +34,54 @@ a:hover {
   background:rgba(0,0,0,0.4);
 }
 
-/* our flex container */
+/*our flex container*/
 .slider-nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
-  display:flex;
+  padding: 0; 
+  display: flex;
+  /*align-items: center; *//*if i were to do this they wouldn't have the same height! we basiclaly want both center & stretch*/
 }
 
-/* our first flex item */
+/*our first flex item*/
 .slider-nav li {
-  flex:2; /* THis is flex item -ish */
+  display:flex;
+  flex:4;
+  /*border: 1px solid red;*//*only for checks*/
   text-align: center;
-  display:flex; /* This is flex container -ish */
+  /*now i make these also a flex container! nesting!*/
+  display: flex;
+  /*align-items: center;*//*this also makes them with different heights*/
 }
 
 .slider-nav .arrow {
   flex:1;
-}
-
-.arrow a {
-  font-size: 30px;
+  font-size: x-large;
 }
 
 .slider-nav a {
-  flex-basis:100%;
+  /*display: block;
+  width: 100%;*/
+  /*i replace these 2 above with the following 1:*/
+  flex-basis: 100%;
+  /*3rd nested flex container*/
+  display: flex;
+  /*now we add a span in our html to fix all the issues!*/
+  /*align-items:center;*/ /*i dont need this? why not!*/
+  /*i dont need these
+  flex:1;
   display:flex;
-  align-items:center;
-  /*We want to stretch as well and center*/
+  padding:20px 5px;*/
 }
-
-/* This is the flex item */
+/*
 .slider-nav span {
   display: block;
-  width: 100%;
+  flex:1;
+  text-align: center;
 }
+*/
+
+/*.slider-nav ul * {
+  border:1px solid red;
+  margin:10px;
+}*/
