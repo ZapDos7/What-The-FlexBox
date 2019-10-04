@@ -33,11 +33,14 @@ a {
 }
 
 /* Flexbox Starts Here: */
-.elements {
+.elements { /*this is my flex container*/
   display:flex;
-  flex-wrap:wrap;
+  flex-wrap:wrap;/* this theyre an endless line*/
+  justify-content: space-between;
 }
-
+/*without the following, they're like tags - a good idea*/
 .item {
-  flex: 1 1 calc(33.33% - 20px);
+  /*flex: 1 1 33.33%; - due to margin we need less*/
+  /*flex: 0 1 calc(33.33% - 20px); - 0 => dont alter the free space*/
+  flex: 1 1 calc(33.33% - 20px); /*1 => fill it up*/
 }
