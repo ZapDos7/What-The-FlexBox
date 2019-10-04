@@ -9,7 +9,7 @@ Exercises for the "What The Flexbox?!" video course by Wes Bos.
 ☑ flex direction<br>
 ☑ flex grow and shrink<br>
 ☑ flex wrapping and columns<br>
-☐ flexbox app layout<br>
+☑ flexbox app layout<br>
 ☑ flexbox form<br>
 ☑ flexbox nav<br>
 ☑ flexbox sizing<br>
