@@ -47,11 +47,6 @@ a {
   color:white;
 }
 
-.flex-form {
-  z-index: 10;
-  position: relative;
-}
-
 .flex-form > * {
   border:0;
   padding:10px;
@@ -71,19 +66,19 @@ a {
 /*Flexbox Starts Here*/
 
 .cover {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex; /*outer flex container*/
+  justify-content: center; /*centered left to right*/
+  align-items: center; /*centered top to bottom*/
 }
-
 
 .flex-form {
-  display:flex;
+  display: flex; /*nested flex container - this line makes all my stuff in the form in the same height!*/
+/*these 2 border rules make it super fancy*/
   border:20px solid rgba(0,0,0,0.3);
   border-radius:5px;
+  /*do i need this? z-index: 10;*/
 }
 
-
 input[type="search"] {
-  flex-basis:500px;
+  flex-basis: 500px;
 }
