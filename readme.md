@@ -14,8 +14,8 @@ Exercises for the "What The Flexbox?!" video course by Wes Bos.
 ☑ flexbox nav<br>
 ☑ flexbox sizing<br>
 ☑ intro<br>
-☐ mobile reordering<br>
-☐ nesting flexbox<br>
+☑ mobile reordering<br>
+☑ nesting flexbox<br>
 ☑ ordering<br>
 ☐ pricing grid<br>
 
