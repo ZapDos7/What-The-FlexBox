@@ -64,13 +64,82 @@ section, footer {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+/* Flex Item */
+.flex-nav li {
+  flex:3;
+}
+
+.flex-nav .social {
+  flex:1;
 }
 
 @media all and (max-width:1000px) {
+  
+  .flex-nav ul {
+    flex-wrap:wrap;
+  }
+
+  .flex-nav li {
+    flex:1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex:1 1 25%;
+  }
 
 }
 
 
 @media all and (max-width:500px) {
+
+  .flex-nav li {
+    flex-basis:100%;
+  }
   
+
+  /* Turn on flexbox */
+  .wrapper { /*this is my flex container*/
+    display:flex;
+    flex-direction:column; /*wihtout this line the site looks like poop!*/
+  }
+
+  .wrapper > * { /*each flex item*/
+  	order:9999; /*arbitrary number, very big*/
+  }
+
+  .flex-nav {
+  	order:1; /*nav goes to the bottom of the page because by default order = 0, so we need the 9999 ^*/
+  }
+
+  /*hamburger*/
+  .toggleNav {
+  	display: block;
+  }
+
+  .flex-nav ul {
+  	display: none;
+  }
+  /*jquery adds a class "open"
+  because slidetoggle doesn't display stuff like we wish to => we need a custom class*/
+
+  .flex-nav ul.open {
+  	display: flex;
+  	/*you can add slide animation for a smoother opening/closing thing*/
+  }
+
+  .top {
+  	order: 2;
+  }
+
+  .details {
+  	order: 3;
+  }
+
+  .signup {
+  	order: 4;
+  }
+
 }
